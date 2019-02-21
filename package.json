@@ -1,0 +1,24 @@
+{
+  "name": "@desco/promise-loop-array",
+  "version": "1.0.0",
+  "description": "Execute a loop with promises in an array",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/descoplay/promise-loop-array.git"
+  },
+  "keywords": [
+    "loop",
+    "promise",
+    "array"
+  ],
+  "author": "Rafael A. R. Dias <eu@diasrafael.com.br>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/descoplay/promise-loop-array/issues"
+  },
+  "homepage": "https://github.com/descoplay/promise-loop-array#readme"
+}
