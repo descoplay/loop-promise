@@ -7,17 +7,31 @@ const loop = (_values, _method, _index = 0) => {
     const value = values.shift()
     const results = []
 
-    return _method(value, _index).then(result => {
-        results.push(result)
+    return _method(value, _index)
+        .then(result => {
+            results.push(result)
 
-        if (values.length === 0) {
-            return Promise.resolve(results)
-        }
+            if (values.length === 0) {
+                return Promise.resolve(results)
+            }
 
-        return loop(values, _method, _index + 1).then(result => {
-            return Promise.resolve(results.concat(result))
+            return loop(values, _method, _index + 1).then(result => {
+                return Promise.resolve(results.concat(result))
+            })
         })
-    })
+        .catch(data => {
+            const result = data.result
+            const type = data.type
+
+            if (type === 'repeat') {
+                return loop([ result, ...values, ], _method, _index).then(result => {
+                    return Promise.resolve(results.concat(result))
+                })
+            }
+            else {
+                return Promise.resolve(results.concat(result))
+            }
+        })
 }
 
 module.exports = promiseLoopArray

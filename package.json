@@ -1,6 +1,6 @@
 {
   "name": "@desco/promise-loop-array",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Execute a loop with promises in an array",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/descoplay/promise-loop-array/issues"
   },
-  "homepage": "https://github.com/descoplay/promise-loop-array#readme"
+  "homepage": "https://github.com/descoplay/promise-loop-array#readme",
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
 }
